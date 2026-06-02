@@ -1,0 +1,24 @@
+{
+  "profiles": {
+    "rigorous": {
+      "temperature": 0.4,
+      "gate": 0.9,
+      "evaluation": 0.8
+    },
+    "daily": {
+      "temperature": 0.8,
+      "gate": 0.6,
+      "evaluation": 0.5
+    },
+    "creative": {
+      "temperature": 1.3,
+      "gate": 0.3,
+      "evaluation": 0.3
+    },
+    "counterfactual": {
+      "temperature": 1.2,
+      "gate": 0.1,
+      "evaluation": 0.2
+    }
+  }
+}

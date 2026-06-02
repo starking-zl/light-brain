@@ -1,0 +1,62 @@
+{
+  "rules": [
+    {
+      "id": "rule_fact",
+      "intent_pattern": ["询问事实", "ask_fact"],
+      "domain_pattern": "*",
+      "schedule": {
+        "call_cerebellum": true,
+        "call_amygdala": true,
+        "call_hippocampus": false,
+        "trigger_clarification": false
+      },
+      "usage_count": 0,
+      "success_rate": 1.0
+    },
+    {
+      "id": "rule_chitchat",
+      "intent_pattern": ["闲聊", "chitchat"],
+      "domain_pattern": "*",
+      "schedule": {
+        "call_cerebellum": false,
+        "call_amygdala": true,
+        "call_hippocampus": true,
+        "trigger_clarification": false
+      },
+      "usage_count": 0,
+      "success_rate": 1.0
+    },
+    {
+      "id": "rule_instruction",
+      "intent_pattern": ["指令请求", "instruction"],
+      "domain_pattern": "*",
+      "schedule": {
+        "call_cerebellum": true,
+        "call_amygdala": false,
+        "call_hippocampus": false,
+        "trigger_clarification": false
+      },
+      "usage_count": 0,
+      "success_rate": 1.0
+    },
+    {
+      "id": "rule_default",
+      "intent_pattern": "*",
+      "domain_pattern": "*",
+      "schedule": {
+        "call_cerebellum": true,
+        "call_amygdala": true,
+        "call_hippocampus": false,
+        "trigger_clarification": false
+      },
+      "usage_count": 0,
+      "success_rate": 1.0
+    }
+  ],
+  "default_schedule": {
+    "call_cerebellum": true,
+    "call_amygdala": true,
+    "call_hippocampus": false,
+    "trigger_clarification": false
+  }
+}

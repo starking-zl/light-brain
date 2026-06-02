@@ -1,0 +1,15 @@
+# 光脑方案 Python AI 层依赖
+# Light-Brain Scheme Python AI Layer Dependencies
+
+# 核心依赖 / Core dependencies
+numpy>=1.24.0
+
+# 深度学习框架（可选，用于真实Transformer模型）/ Deep learning framework (optional, for real Transformer models)
+# torch>=2.0.0
+# transformers>=4.30.0
+
+# 中文分词（可选）/ Chinese tokenization (optional)
+# jieba>=0.42.1
+
+# 日志与配置 / Logging and configuration
+# (使用标准库，无需额外依赖)

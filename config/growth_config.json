@@ -1,0 +1,9 @@
+{
+  "base_daily_quota": {
+    "neural_connections": 100,
+    "symbolic_entries": 50
+  },
+  "maturity_decay_lambda": 0.5,
+  "carryover_ratio": 0.3,
+  "allocation_interval_hours": 1
+}

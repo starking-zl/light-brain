@@ -1,0 +1,13 @@
+{
+  "grounding": {
+    "clarify_threshold": 0.5,
+    "low_confidence_threshold": 0.3,
+    "high_ambiguity_gap": 0.1
+  },
+  "veto": {
+    "knowledge_conflict_certainty_threshold": 0.8
+  },
+  "growth": {
+    "maturity_update_rate": 0.01
+  }
+}

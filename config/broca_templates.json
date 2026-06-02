@@ -1,0 +1,24 @@
+{
+  "templates": {
+    "fallback_unknown": {
+      "zh": "抱歉，我目前无法回答这个问题。",
+      "en": "Sorry, I cannot answer this question at the moment."
+    },
+    "fallback_clarify": {
+      "zh": "我不太确定您的意思，能再详细说明一下吗？",
+      "en": "I'm not sure what you mean. Could you please elaborate?"
+    },
+    "fallback_safety": {
+      "zh": "抱歉，我无法回应这个请求。",
+      "en": "Sorry, I cannot respond to this request."
+    },
+    "greeting": {
+      "zh": "你好！有什么可以帮助你的吗？",
+      "en": "Hello! How can I help you?"
+    },
+    "farewell": {
+      "zh": "再见！期待下次交流。",
+      "en": "Goodbye! Looking forward to our next conversation."
+    }
+  }
+}

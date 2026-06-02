@@ -1,0 +1,34 @@
+[
+  {
+    "label": "询问事实",
+    "language": "zh",
+    "vector": [0.1, 0.2, 0.3],
+    "polarity": 0.0,
+    "domain": "通用",
+    "default_keywords": ["事实", "是什么"]
+  },
+  {
+    "label": "ask_fact",
+    "language": "en",
+    "vector": [0.1, 0.2, 0.3],
+    "polarity": 0.0,
+    "domain": "general",
+    "default_keywords": ["fact", "what is"]
+  },
+  {
+    "label": "闲聊",
+    "language": "zh",
+    "vector": [0.5, 0.1, 0.2],
+    "polarity": 0.3,
+    "domain": "社交",
+    "default_keywords": ["你好", "天气"]
+  },
+  {
+    "label": "chitchat",
+    "language": "en",
+    "vector": [0.5, 0.1, 0.2],
+    "polarity": 0.3,
+    "domain": "social",
+    "default_keywords": ["hello", "weather"]
+  }
+]

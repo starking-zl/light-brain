@@ -1,0 +1,53 @@
+[package]
+name = "light-brain-core"
+version = "1.0.0"
+edition = "2021"
+authors = ["Light-Brain Team"]
+license = "MIT"
+description = "Light-Brain Scheme Rust Core Engine - Growth-oriented neuro-symbolic fusion architecture"
+repository = "https://github.com/starking-zl/light-brain"
+readme = "README.md"
+
+[dependencies]
+# 序列化与反序列化 / Serialization and deserialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# 错误处理 / Error handling
+thiserror = "1.0"
+
+# 时间处理 / Time handling
+chrono = "0.4"
+
+# 日志 / Logging
+log = "0.4"
+env_logger = "0.11"
+
+# 随机数（用于 UUID 等） / Random numbers (for UUID, etc.)
+rand = "0.8"
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+# 数据库（海马体 SQLite） / Database (Hippocampus SQLite)
+rusqlite = { version = "0.32", features = ["bundled", "chrono"] }
+
+# 正则表达式（用于知识抽取） / Regular expressions (for knowledge extraction)
+regex = "1.0"
+
+# 向量运算（需要时启用） / Vector operations (enable when needed)
+# nalgebra = "0.33"
+
+# 图算法（可选） / Graph algorithms (optional)
+petgraph = "0.6"
+
+# 异步运行时（v1.0 暂以同步为主，预留异步能力） / Async runtime (v1.0 mainly synchronous, reserve async capability)
+tokio = { version = "1.0", optional = true }
+
+[dev-dependencies]
+# 测试用模拟工具 / Mocking tools for testing
+mockall = "0.13"
+tempfile = "3.0"
+
+[features]
+default = []
+# 预留异步支持 / Reserve async support
+async = ["tokio"]

@@ -1,0 +1,18 @@
+[package]
+name = "light-brain-binding"
+version = "1.0.0"
+edition = "2021"
+authors = ["Light-Brain Team"]
+license = "MIT"
+description = "PyO3 bindings for Light-Brain Scheme Rust Core"
+
+[lib]
+name = "light_brain_binding"
+crate-type = ["cdylib"]
+
+[dependencies]
+light-brain-core = { path = "../rust-core" }
+pyo3 = { version = "0.22", features = ["extension-module"] }
+serde_json = "1.0"
+log = "0.4"
+env_logger = "0.11"

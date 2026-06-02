@@ -1,0 +1,66 @@
+{
+  "rules": [
+    {
+      "intent_pattern": ["询问事实", "ask_fact"],
+      "polarity_range": [-1.0, 1.0],
+      "style": {
+        "warmth": 0.4,
+        "formality": 0.7,
+        "defensiveness": 0.3,
+        "humor": 0.1,
+        "label": "专业"
+      }
+    },
+    {
+      "intent_pattern": "*",
+      "polarity_range": [0.5, 1.0],
+      "style": {
+        "warmth": 0.9,
+        "formality": 0.4,
+        "defensiveness": 0.2,
+        "humor": 0.4,
+        "label": "热情"
+      }
+    },
+    {
+      "intent_pattern": "*",
+      "polarity_range": [-1.0, -0.3],
+      "style": {
+        "warmth": 0.3,
+        "formality": 0.6,
+        "defensiveness": 0.8,
+        "humor": 0.0,
+        "label": "谨慎"
+      }
+    },
+    {
+      "intent_pattern": ["指令请求", "instruction"],
+      "polarity_range": [-1.0, 1.0],
+      "style": {
+        "warmth": 0.3,
+        "formality": 0.8,
+        "defensiveness": 0.2,
+        "humor": 0.0,
+        "label": "简洁"
+      }
+    },
+    {
+      "intent_pattern": ["闲聊", "chitchat"],
+      "polarity_range": [-1.0, 1.0],
+      "style": {
+        "warmth": 0.7,
+        "formality": 0.3,
+        "defensiveness": 0.2,
+        "humor": 0.5,
+        "label": "友好"
+      }
+    }
+  ],
+  "default_style": {
+    "warmth": 0.5,
+    "formality": 0.5,
+    "defensiveness": 0.5,
+    "humor": 0.2,
+    "label": "正常"
+  }
+}
