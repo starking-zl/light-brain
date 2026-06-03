@@ -7,8 +7,11 @@ import json
 import os
 from .planner import SemanticPlanner
 from .generator import SLMGenerator
-from .constraints import ConstraintGuider
+from .constraint import ConstraintGuider
 from .guardrails import GuardrailManager
+
+__all__ = ["Broca", "BrocaSLM", "SemanticPlanner", "SLMGenerator"]
+
 
 class Broca:
     """
@@ -93,3 +96,7 @@ class Broca:
                 description=fact.get("description", "")
             )
         return template
+
+
+# 别名
+BrocaSLM = Broca

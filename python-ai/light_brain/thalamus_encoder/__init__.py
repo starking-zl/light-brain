@@ -3,8 +3,33 @@
 # 负责将原始文本转化为结构化符号标签
 # Responsible for converting raw text into structured symbolic labels
 
-from .encoder import IntentEncoder
+from .encoder import ThalamusEncoder
 from .grounding import GroundingLayer
+
+__all__ = ["ThalamusEncoder", "GroundingLayer"]
+
+
+class PrototypeStore:
+    """
+    原型向量存储
+    Prototype vector store
+    简化实现：从JSON配置加载原型向量
+    """
+    
+    def __init__(self):
+        self.prototypes = {}
+    
+    def load_from_file(self, filepath: str):
+        """从JSON文件加载原型向量"""
+        import json
+        from pathlib import Path
+        if Path(filepath).exists():
+            with open(filepath, 'r', encoding='utf-8') as f:
+                self.prototypes = json.load(f)
+    
+    def get_prototypes(self):
+        return self.prototypes
+
 
 class Thalamus:
     """
@@ -14,17 +39,16 @@ class Thalamus:
     Converts user input into symbolic labels such as intent, polarity, domain
     """
     
-    def __init__(self, encoder_model_path: str, prototypes: dict):
+    def __init__(self, prototypes: dict = None):
         """
         初始化丘脑模块
         Initialize Thalamus module
         
         Args:
-            encoder_model_path: 编码器模型路径 / Encoder model path
             prototypes: 原型向量配置 / Prototype vector configuration
         """
-        self.encoder = IntentEncoder(encoder_model_path)
-        self.grounding = GroundingLayer(prototypes)
+        self.encoder = ThalamusEncoder()
+        self.grounding = GroundingLayer(prototypes or {})
     
     def perceive(self, text: str) -> dict:
         """
