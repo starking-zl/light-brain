@@ -30,3 +30,6 @@ data/dreams/*
 Logs
 
 *.log
+
+# Release Assets
+release_assets/
