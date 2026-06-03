@@ -29,11 +29,13 @@
 
 ### 一键下载（推荐）/ One-Click Download (Recommended)
 
-使用 Git 克隆仓库（**不包含 zip 压缩包**）：
+使用 Git 克隆仓库获取完整源码：
 
-    git clone https://github.com/starking-zl/light-brain.git
+```bash
+git clone https://github.com/starking-zl/light-brain.git
+```
 
-一键部署脚本会自动处理所有依赖和编译，无需下载 zip 文件。
+一键部署脚本会自动处理所有依赖和编译，适合开发和部署。
 
 ### 获取完整压缩包 / Get Complete Archive
 
@@ -44,10 +46,16 @@
 Release 页面包含：
 - `light-brain.zip` - 完整源码压缩包
 - `light-brain-full.zip` - 完整版（含所有组件）
-- `光脑方案.pdf` - 光脑方案论文
 - `光脑方案MVP.zip` - MVP 最小可行产品包
 
-> 💡 **提示**：对于开发和部署，使用 `git clone` 即可。一键部署脚本会自动处理所有依赖。
+### 论文文档 / Papers
+
+本仓库包含以下论文文档（PDF 格式）：
+
+- 📄 `光脑方案.pdf` - 光脑方案完整论文（可直接下载）
+- 📄 `light_brian.pdf` - Light Brain Scheme Paper (English version)
+
+> 💡 **提示**：直接在仓库根目录即可下载 PDF 文件，无需访问 Release。
 
 ---
 
